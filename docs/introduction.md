@@ -149,6 +149,7 @@ contract Receiver {
 <p>Firstly, the gas price is a network parameter, and the price does not change on its own as a reflection of demand at a given moment.</p>
 <p>In the future, it is planned to introduce a mechanism for controlling gas prices. Most likely, this will be realized with the establishment of a hard capped maximum gas price (the current price) and a possible lower price which would be applied if the demand decreases. Because on this blockchain it is critical for users to be able to calculate the exact maximum amount of tokens that they will have to spend on any action. (Due to the asynchronous model employed, you have to be able to know how much money to attach to a message so that you can send enough to cover all transaction fees in the sequence of messages)</p>
 <p>We pay for:</p>
+
 1. Computing, the same as other blockchains.
 2. Loading memory cells, which is quite different from how things work on Ethereum. We will cover this in detail in the chapters on tvm and boc.
 3. The creation of outgoing messages, and we pay for incoming messages if these are external and we agree to pay for them. 
