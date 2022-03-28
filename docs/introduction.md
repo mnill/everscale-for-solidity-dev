@@ -109,3 +109,53 @@ contract Wallet {
 }
 ```
 
+<br />
+
+#### Internal message
+
+<p>
+Internal message. This is basically just a message from one contract to another. This kind of message always has to carry with it a certain amount of EVER, because when another contract is called there is no gas credit like there is with an external message, and before calling  tvm.accept(); (if this occurs) gas will be paid for from the VALUE attached to the message. If the sum of EVER cannot cover the gas fees, the transaction will fail.  
+</p>
+
+<p>
+dest.transfer(value, bounce, 0); - This is essentially the creation of an internal message with the value sent which will call to the receive() function of the receiving contract without any kind of data.    
+</p>
+
+```solidity
+contract Receiver {
+    uint public counter = 0;
+    receive() external {
+        ++counter;
+    }
+}
+```
+
+<br />
+
+###  <span style="color:red">Important Concept </span>
+
+<p>On ES there are guarantees for the delivery and order of internal messages on the blockchain protocol level. </p>
+
+<p>If you send a message, it will be delivered.</p>
+
+<p>If contract A sends two messages to contract B, they will be delivered to contract B in the order in which they were sent from contract A. It does not matter whether the messages were sent via one transaction or via different transactions.</p>
+
+![IMAGE_2022-01-08_185311](https://user-images.githubusercontent.com/3879603/160408117-45479126-43d3-4f29-969a-610258bb4f94.jpg)
+
+### Gas.
+
+<p>We are not going to cover the exact formulas here, these are available from: https://docs.ton.dev/86757ecb2/v/0/p/632251-fee-calculation-details</p>
+<p>We will just cover what you need to know and what you are paying for. </p>
+<p>Firstly, the gas price is a network parameter, and the price does not change on its own as a reflection of demand at a given moment.</p>
+<p>In the future, it is planned to introduce a mechanism for controlling gas prices. Most likely, this will be realized with the establishment of a hard capped maximum gas price (the current price) and a possible lower price which would be applied if the demand decreases. Because on this blockchain it is critical for users to be able to calculate the exact maximum amount of tokens that they will have to spend on any action. (Due to the asynchronous model employed, you have to be able to know how much money to attach to a message so that you can send enough to cover all transaction fees in the sequence of messages)</p>
+<p>We pay for:</p>
+1. Computing, the same as other blockchains.
+2. Loading memory cells, which is quite different from how things work on Ethereum. We will cover this in detail in the chapters on tvm and boc.
+3. The creation of outgoing messages, and we pay for incoming messages if these are external and we agree to pay for them. 
+4. Storage. Every contract pays a rental fee for the storage of its own code and data in the network state. This fee is withdrawn each time a message is sent to you (for all the time that has elapsed since the last transaction). If the balance of your contract falls below 0, calls to the contract will cease to work until you replenish the balance. If the balance falls below -0.1 EVER (for workchain 0, a network parameter, can be changed) the contract will be frozen, with only the hash of data and code remaining while everything else is deleted. The unfreezing process is complicated, you need to replenish your contract and provide its data and code  the moment it is frozen. In theory it is even possible that the hash gets deleted, if the contract is left frozen for a while. So you don’t want to store inessential information on the blockchain, even though writing on the chain is cheap, as we pay for storage on the chain separately. In the chapter called “Distributed Programming” we will look at how we should organize our smart contracts in accordance with the “paid storage” paradigm.  
+
+<br />
+
+<p>The next part of this tutorial will cover what we need to know about TVM and the format of storing data on the blockchain. </p>
+
+[TVM and BoC](/tvmandboc)
