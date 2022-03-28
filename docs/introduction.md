@@ -157,5 +157,3 @@ contract Receiver {
 <br />
 
 <p>The next part of this tutorial will cover what we need to know about TVM and the format of storing data on the blockchain. </p>
-
-[TVM and BoC](/tvmandboc)
