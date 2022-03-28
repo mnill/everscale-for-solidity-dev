@@ -1,3 +1,11 @@
+---
+layout: default
+title: Home
+nav_order: 1
+description: "This tutorial is about how to understand 'Everscale' blockchain if you familiar with basic concepts how ethereum works and have basic knowlage about solidity language."
+permalink: /
+---
+
 ## Everscale for the solidity developer ENG
 
 This tutorial is about how to understand 'Everscale' blockchain if you familiar with basic concepts how ethereum works and have basic knowlage about solidity language.
