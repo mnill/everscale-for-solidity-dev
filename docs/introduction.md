@@ -140,7 +140,7 @@ contract Receiver {
 
 <p>If contract A sends two messages to contract B, they will be delivered to contract B in the order in which they were sent from contract A. It does not matter whether the messages were sent via one transaction or via different transactions.</p>
 
-![IMAGE_2022-01-08_185311](https://user-images.githubusercontent.com/3879603/160408117-45479126-43d3-4f29-969a-610258bb4f94.jpg)
+![](../assets/images/send_two_messages.jpg)
 
 ### Gas.
 
