@@ -38,7 +38,7 @@ permalink: /tvm_and_boc
 
 <p>When you create a message, you have to show a flag which will determine where the money that gets attached to the message will come from and how the creation of the message will be paid for. The money can come from the contract account or be taken from money left over on the incoming message after the gas deduction.</p>
 
-<p>From this document [https://github.com/tonlabs/TON-Solidity-Compiler](Ton solidity compiler) :</p>
+<p>From this document https://github.com/tonlabs/TON-Solidity-Compiler :</p>
 
 <p>Regular money transfer:</p>
 
