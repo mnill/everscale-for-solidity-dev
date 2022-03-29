@@ -23,4 +23,4 @@ This tutorial is about how to understand 'Everscale' blockchain if you familiar 
 
 ### Thanks
 
-Big thanks for Defi Alliance (Especially Broxus) for helping with transalate this tutorial to english and editing.
+Big thanks for Defi Alliance (Especially Broxus) for helping with transalate this tutorial to english and correction work.
