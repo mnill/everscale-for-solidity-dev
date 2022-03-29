@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Phases of transaction execution
+title: Carefully working with attached value
 parent: Additional information
-nav_order: 2
+nav_order: 3
 ---
 
 # Carefully working with VALUE when creating messages

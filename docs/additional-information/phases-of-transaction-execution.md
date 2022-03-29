@@ -5,7 +5,7 @@ parent: Additional information
 nav_order: 2
 ---
 
-#Phases of transaction execution
+# Phases of transaction execution
 
 1. Storage phase - First, money is withdrawn for storing the contract data in the blockchain, and at this stage the contract can be frozen if it does not have enough money to pay for storage.
 2. Credit phase - the account balance is increased from the value sent in the message.
