@@ -3,7 +3,7 @@ title: Everscale for solidity developers
 description: This tutorial is about how to understand 'Everscale' blockchain if you familiar with basic concepts how ethereum works and have basic knowlage about solidity language.
 search_enabled: false
 aux_links:
-  "Just the Docs on GitHub":
+  "This tutorial on GitHub":
     - "//github.com/mnill/everscale-for-solidity-dev"
 
 gh_edit_link: true
