@@ -5,7 +5,7 @@ parent: Additional information
 nav_order: 4
 ---
 
-# The danger of default “responsible”
+## The danger of default “responsible”
 
 To start, let’s think of “responsible” like sugar. 
 

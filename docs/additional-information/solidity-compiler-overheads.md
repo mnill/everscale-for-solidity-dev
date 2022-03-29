@@ -5,7 +5,7 @@ parent: Additional information
 nav_order: 8
 ---
 
-# Magic and overheads of Solidity compilers
+## Magic and overheads of Solidity compilers
 
 
 There are some nuances to the TON Solidity compiler.  

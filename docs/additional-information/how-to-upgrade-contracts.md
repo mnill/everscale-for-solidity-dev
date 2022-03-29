@@ -5,7 +5,7 @@ parent: Additional information
 nav_order: 7
 ---
 
-# How to upgrade contracts
+## How to upgrade contracts
 
 
 There are two complications with upgrading contracts.

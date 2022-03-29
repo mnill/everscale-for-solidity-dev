@@ -5,7 +5,7 @@ parent: Additional information
 nav_order: 10
 ---
 
-# LT Guarantees
+## LT Guarantees
 
 This very complex topic (the complexity arises due to sharding), and there is no consensus in the community yet on what kind of guarantees we can count on. So everything described below has not yet been confirmed with documentation.
 

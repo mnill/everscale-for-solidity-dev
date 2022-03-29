@@ -5,7 +5,7 @@ parent: Additional information
 nav_order: 9
 ---
 
-# How the blockchain works on the block and queue level.
+## How the blockchain works on the block and queue level.
 
 This note is just for a general understanding of how the blockchain works, it’s not 100% accurate, we are waiting for a description from the writers of the node. This may change after a new consensus.
 

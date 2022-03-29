@@ -6,7 +6,7 @@ has_children: true
 permalink: /additional-information
 ---
 
-# Additional information
+## Additional information
 
 This concludes the introductory part of the tutorial. 
 

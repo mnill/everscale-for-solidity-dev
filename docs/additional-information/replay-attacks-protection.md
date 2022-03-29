@@ -5,7 +5,7 @@ parent: Additional information
 nav_order: 6
 ---
 
-# Protection against replay attacks for external messages
+## Protection against replay attacks for external messages
 
 <br />
 

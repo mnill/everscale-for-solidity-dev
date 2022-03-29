@@ -5,7 +5,7 @@ parent: Additional information
 nav_order: 5
 ---
 
-# Gas limits and external message size
+## Gas limits and external message size
 
 <br />
 

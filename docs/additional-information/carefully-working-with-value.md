@@ -5,7 +5,7 @@ parent: Additional information
 nav_order: 3
 ---
 
-# Carefully working with VALUE when creating messages
+## Carefully working with VALUE when creating messages
 
 In general, whenever you create outgoing messages while processing incoming internal messages, you must be very careful with the value that you attach to messages.
 

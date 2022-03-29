@@ -6,7 +6,7 @@ description: "Chapter about distributed programming"
 permalink: /distributed_programming
 ---
 
-# Distributed programming.
+## Distributed programming.
 
 <p>
 How do contracts and programmers survive in ES? :-) They don’t write contracts in which the state can continuously grow, but write distributed systems of smart contracts. And they are capable of doing this by virtue of the concepts realized in ES. For example TIP-3 tokens create a separate smart-contract for each token owner (that is what a wallet is) and can send tokens directly among contracts without a central hub. Below we will look at an example of how this works 
