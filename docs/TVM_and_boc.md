@@ -6,7 +6,7 @@ description: "Chapter about tvm and boc"
 permalink: /tvm_and_boc
 ---
 
-## TVM - Trustless Virtual Machine. 
+## TVM - Ton Virtual Machine. 
 
 <p>Realized 1 to 1 just like in Nikolai Durov’s whitepaper: https://ton.org/tvm.pdf</p>
 
@@ -110,7 +110,7 @@ function setNewOnwer(
 
         // We send the rest of the remaining value back to the sender.
         // value - 0, bounce - false, flag - 64
-        msg.sender.transfer(0, false, 64);;
+        msg.sender.transfer(0, false, 64);
 }
 ```
 
@@ -132,7 +132,9 @@ function setNewOnwer(
 <p> BoC is an acyclic graph. The link to a cell c is a hash of its data and its hash links to subcells. So we cannot create a cycle. (Because if we add a link from the parent cell to the child cell, then, by doing so, we recalculate all hashes from the changed cell to the root cell and the link to the parent cell changes).</p>
 <p>The entire state of the contract is BoC. This is one cell with as many child cells as you like. Ton Solidity takes care of work with states for us, but you need to understand that, because of ES’s tree structure, we normally don’t write contracts with a lot of data. In order to illustrate how it works, consider (schematically) how a dictionary could be implemented in BoC.</p>
 
-<p>Each circle in the picture is a separate cell. To get the value by key 2, Solidity needs to load a cell of depth 0, then depth 1 and then depth 2. We have to pay gas for each time a cell is loaded. And if we change the value by key two, we will need to recalculate all references from the cell with the value of the root cell because the cell reference is a hash (cell.data + cell.refs). So, links to all cells along the way will change and we will need to change them from bottom to top.</p>
+![](../assets/images/storage.png)
+
+<p>Each circle in the picture is a separate cell. To get the value by key 2, TVM needs to load a cell of depth 0, then depth 1 and then depth 2. We have to pay gas for each time a cell is loaded. And if we change the value by key two, we will need to recalculate all references from the cell with the value of the root cell because the cell reference is a hash (cell.data + cell.refs). So, links to all cells along the way will change and we will need to change them from bottom to top.</p>
 <p>So, the more elements our dictionary has, the deeper the cell will be and the more expensive it will be to work with. For a dictionary, the cost of gas will increase to O(log n) in a worst case scenario. (In reality, everything would be more complicated but O (log n) can be useful to look at as a worst case scenario).</p>
 <p>Now, if we are creating an ERC20 token, then the more owners this token has, the more expensive the gas will be to use this contract (the size of the owner-number map will grow). And although O(Log n) doesn’t sound scary at all, and the cost of working with the map will increase very, very slowly after the first hundred elements, and then even slower after that, in ES there we have a storage fee that grows linearly.</p>
 <p>If you have accounts in your ERC-20 token that contain pennies, then the fees for holding these accounts will greatly exceed the value of these accounts over the years. Therefore, in ES it is customary to make separate contracts for separate accounts, which themselves pay for their storage. We will look at how the TIP-3 standard (a distributed replacement for ERC-20) works in the next chapter.</p>
