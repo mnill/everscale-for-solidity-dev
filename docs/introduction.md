@@ -63,7 +63,7 @@ permalink: /introduction
 
 #### External message 
 
-<p>A message from nowhere or to nowhere :-) This kind of message has only a destination address or a sender’s address. Primarily, this kind of message is used to call contracts from the real world. This is a fairly unique concept that allows any contract to start a chain of messages. </p>
+<p>A message from nowhere or to nowhere :-) This kind of message has only a destination address or a sender’s address. Primarily, this kind of message is used to call contracts from the outside world. This is a fairly unique concept that allows any contract to start a chain of messages. </p>
 <p>External messages work like this: you send a message with data from nowhere to a contract.</p>
 <p>A validator allocates 10k of gas credit to this message, and attempts to complete the transaction by calling the contract and passing your message to it. The smart contract must agree to pay for the transaction from the contract account by calling the tvm.accept() method before it runs out of gas. </p>
 <p>If this method is called then the transaction continues and the contract can create other outgoing messages.</p>
