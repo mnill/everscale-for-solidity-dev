@@ -318,7 +318,7 @@ contract TokenWalletContract is ITokenWalletContract {
   uint128 public balance;
 
   constructor() public {
-    //We check that the public key has been established
+    //We check that the public key has been set
     require(tvm.pubkey() != 0, TokenWalletContractErrors.error_tvm_pubkey_not_set);
     tvm.accept();
   }
