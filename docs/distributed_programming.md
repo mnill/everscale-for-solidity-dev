@@ -46,13 +46,12 @@ Then we send a special external message to this address with the code and initia
 Now let’s look at a really simplified realization of a TIP-3 token. 
 </p>
 
-<p>Our token consists of 2 contracts:
+<p>Our token consists of 2 contracts:</p>
 
-* <p> Root.sol is controlled by whoever released the token, this allows them to print tokens and deploy the wallets of individual users. </p>
-* <p> Wallet.sol is a wallet contract for individual users. Yes, each user has their own small contract that stores their token balance. </p> 
+* <p>Root.sol is controlled by whoever released the token, this allows them to print tokens and deploy the wallets of individual users. </p>
+* <p>Wallet.sol is a wallet contract for individual users. Yes, each user has their own small contract that stores their token balance. </p> 
 
 <br />
-</p>
 
 <p>
 By creating contract-wallets we solve a number of different problems: 
