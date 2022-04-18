@@ -156,7 +156,7 @@ contract Receiver {
 <p>We are not going to cover the exact formulas here, these are available from: https://docs.ton.dev/86757ecb2/v/0/p/632251-fee-calculation-details</p>
 <p>We will just cover what you need to know and what you are paying for. </p>
 <p>Firstly, the gas price is a network parameter, and the price does not change on its own as a reflection of demand at a given moment.</p>
-<p>In the future, it is planned to introduce a mechanism for controlling gas prices. Most likely, this will be realized with the establishment of a hard-capped maximum gas price (the current price) and a possible lower price which would be applied if the demand decreases. That's why it is critical for users to be able to calculate the exact maximum amount of tokens that they will have to spend on any action. (Due to the asynchronous model employed, you have to be able to know how much money to attach to a message so that you can send enough to cover all transaction fees in the sequence of messages)</p>
+<p>In the future, it is planned to introduce a mechanism for controlling gas prices. Most likely, this will be realized with the establishment of a hard-capped maximum gas price (the current price) and a possible lower price which would be applied if the demand decreases. Gas price will be hard-capped because on this blockchain it is critical for users to be able to calculate the exact maximum amount of tokens that they will have to spend on any action. (Due to the asynchronous model employed, you have to be able to know how much money to attach to a message so that you can send enough to cover all transaction fees in the long sequence of messages)</p>
 <p>We pay for:</p>
 
 1. Computing, the same as other blockchains.
