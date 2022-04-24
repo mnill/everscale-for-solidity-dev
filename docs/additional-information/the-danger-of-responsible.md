@@ -57,7 +57,7 @@ So this sugar simply adds to the answerID call, and the compiler forces the crea
 
 Why is a minimal amount of value attached to the default answer for responsible? Because sending a message with a 0 value is pointless, it will not pass the initial checks of the smart contract and will not reach the tvm.accept() call.
 
-And if we set flag: 64 and value: 0, then it will turn out that in the return message we will simply send the entire remaining balance from the incoming message and will not spend the smart contract money (this works if there were no other messages created in this transaction. If there are, use rawReverse and 128, also see “Carefully working with VALUE when creating messages”).
+And if we set flag: 64 and value: 0, then it will turn out that in the return message we will simply send the entire remaining balance from the incoming message and will not spend the smart contract money (this works if there were no other messages created in this transaction. If there are, use rawReserve and 128, also see “Carefully working with VALUE when creating messages”).
 
 ```solidity
 
