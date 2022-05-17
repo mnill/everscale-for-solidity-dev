@@ -6,6 +6,8 @@ description: "This tutorial is about how to understand the 'Everscale' blockchai
 permalink: /
 ---
 
+Tutorial moved to the official documentation [https://docs.everscale.network/develop/smart-contract/learn](https://docs.everscale.network/develop/smart-contract/learn)
+
 ## Everscale for the solidity developer ENG
 
 This tutorial helps you understand the 'Everscale' blockchain if you are familiar with basic concepts on how Ethereum works and have a basic knowlage of the Solidity language.
