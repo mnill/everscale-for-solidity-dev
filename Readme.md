@@ -1,5 +1,3 @@
 ### Everscale for the solidity developer
 
-Source code of https://mnill.github.io/everscale-for-solidity-dev/
-
-Contributions are welcome!
+This is moved to https://docs.everscale.network/develop/smart-contract/learn
